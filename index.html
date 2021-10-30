@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOTES</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+
+    <main>
+
+        <div class="container">
+            <div class="sidebar">
+                <div class="heading">
+                    <h3 class="sidebar__title">Notes-App</h3>
+                </div>
+
+                <div class="add">
+                    <a href="#" class="add-main-btn" id="addBtn"><i class="ri-add-circle-fill"></i></a>
+                    <div class="colors" id="colors">
+                        <button class="add-btn" id="moccasin" style="background-color: moccasin;"></button>
+                        <button class="add-btn" id="coral" style="background-color: coral;"></button>
+                        <button class="add-btn" id="plum" style="background-color: plum;"></button>
+                        <button class="add-btn" id="cyan" style="background-color: cyan;"></button>
+                        <button class="add-btn" id="palegreen" style="background-color: palegreen;"></button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="main-content">
+                <div class="hero">
+                    <h1 class="hero__title">Notes</h1>
+                </div>
+                <div class="notes__container" id = "body">
+          
+              
+                </div>
+            </div>
+        </div>
+        <section class="form form-display-none" id="form">
+            <div class="form__container">
+                <div class="form__box">
+                    <button class="form__close" id ="form-close"><i class="ri-close-line"></i></button>
+                    <h2 class="form__title">Add Your Note</h2>
+                    <form class = "form" id = "survey">
+                    <input type="text" id="title" class="title" placeholder="Title">     
+                    <textarea class="note" id="note" cols = "30" placeholder="Note" rows = "5"></textarea>
+                    <button class="add-btn" id = "form-color"></button>
+                    <button class = "form__btn" id = "form-btn"><i class="ri-add-line"></i> Add</button>
+                    
+                </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="frontend.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
