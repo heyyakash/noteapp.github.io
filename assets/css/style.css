@@ -6,7 +6,8 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
-    background-color: lightskyblue;
+    background:url(/assets/img/background.jpg);
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,23 +16,21 @@ body{
     overflow:hidden;
  
 }
+
 a{
     text-decoration: none;
 }
-.circle{
-    position: absolute;
-    height: 300px;
-    width: 300px;
-    background-color: #c0d6f3;
-    border-radius:50%;
+::-webkit-scrollbar{
+    width: 10px;
 }
-.circle-1{
-    top:-40px;
-    left:-50px;
+::-webkit-scrollbar-thumb{
+    background: rgba(173, 216, 230, 0.493);
+    border-radius: 5px;
 }
-.circle-2{
-    right:-50px;
-    bottom:-50px;
+.dflex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* ================ CONTAINER ============== */
 .container{
@@ -102,16 +101,27 @@ a{
     transition:.2s;
 }
 .add-btn-show{
-    height:500px;
+    height:150px;
     
 }
-
+.dark-mode-toggle{
+    margin-top: auto;
+    margin-bottom: 2rem;
+}
+#darkMode{
+    cursor: pointer;
+    padding:.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:black;
+}
 /* ================== MAIN -CONTENT ================== */
 .main-content{
     width: 92%;
     height: 100%;
     background-color: rgba(255,255,255,0.3);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(30px);
     padding:1rem 3rem;
 }
 .hero__title{
@@ -122,7 +132,7 @@ a{
 .notes__container{
     display: flex;
     flex-wrap: wrap;
-    gap:2.4rem;
+    gap:2.3rem;
     width: 95%;
     height: 450px;
     margin-top: 2rem;
@@ -151,9 +161,9 @@ a{
     margin-top:1rem;
     bottom:10px;
     left:20px;
-    font-size:0.8rem;
+    font-size:0.728rem;
     color:black;
-    font-weight: 600;
+    font-weight: 500;
 }
 .note__delete{
     position: absolute;
@@ -191,7 +201,7 @@ a{
     width: 400px;
     padding:10px 20px;
     /* background-color:rgba(255, 255, 255, 0.712); */
-    opacity: 0.5;
+    opacity: 0.954;
     box-shadow: 20px 20px 50px rgba(0,0,0,.3);
 }
 .form__title{
@@ -237,3 +247,15 @@ a{
     cursor: pointer;
 }
 
+/* ================== DARK MODE STYLE ================== */
+.body-dark{
+    background:none;
+    background-color:#05050a;
+}
+.sidebar-dark{
+    background-color: #323232;
+    color:white;
+}
+.font-dark{
+    color:white;
+}

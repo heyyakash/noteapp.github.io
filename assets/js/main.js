@@ -4,6 +4,16 @@ const form = document.getElementById("survey");
 const FormBox = document.getElementById("form");
 formBtn.addEventListener("click", addNote);
 
+// ================= NOTES =======================
+class noteContent{
+    constructor(title, body,date, color){
+        this.title=title;
+        this.body=body;
+        this.date=date;
+        this.color=color;
+    }
+}
+
 function addNote(e){
     e.preventDefault();
     let noteTitle = document.getElementById("title").value;
@@ -14,13 +24,7 @@ function addNote(e){
     let monthNow = months[date.getMonth()];
     let day = date.getDate();
     let year =date.getFullYear();
-    let newObj = {
-        title:noteTitle,
-        body:noteText,
-        date:`${monthNow} ${day}, ${year}`,
-        color:noteColor
-    }
-    console.log(noteColor);
+    let newObj = new noteContent(noteTitle,noteText,`${monthNow} ${day}, ${year}`,noteColor)
     getNotes(newObj);
     form.reset();
     FormBox.classList.add("form-display-none");
@@ -40,10 +44,11 @@ function getNotes(newObj){
 }
 
 function showNotes(){
-    const notesBody = document.getElementById("body");
+    let notesBody = document.getElementById("body");
     let notes = localStorage.getItem("notes");
     if (notes==null){
         arr = [];
+        
     }
     else{
         arr = JSON.parse(notes);
@@ -72,3 +77,4 @@ function deleteNote(indexNo){
     localStorage.setItem("notes", JSON.stringify(arr));
     showNotes();   
 }
+
