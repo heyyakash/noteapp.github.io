@@ -249,8 +249,11 @@ a{
 
 /* ================== DARK MODE STYLE ================== */
 .body-dark{
-    background:none;
     background-color:#05050a;
+    background:url(background-dark.jpg);
+    background-size: cover;
+    backdrop-filter: blur(15px);
+    
 }
 .sidebar-dark{
     background-color: #323232;
