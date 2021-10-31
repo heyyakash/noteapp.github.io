@@ -6,7 +6,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
-    background:url(/assets/img/background.jpg);
+    background:url(background.jpg);
     background-size: cover;
     display: flex;
     justify-content: center;
